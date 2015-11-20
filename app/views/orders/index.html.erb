@@ -1,0 +1,16 @@
+<h1>Listing Lunch Orders</h1>
+ 
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Order</th>
+  </tr>
+ 
+  <% @orders.each do |o| %>
+    <tr>
+      <td><%= o.date %></td>
+      <td><%= o.order %></td>
+      <td><%= link_to 'Show', order_path(order) %></td>
+    </tr>
+  <% end %>
+</table>
